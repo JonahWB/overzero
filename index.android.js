@@ -3,7 +3,7 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
+var Swiper = require('react-native-swiper')
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -13,15 +13,28 @@ import {
   View
 } from 'react-native';
 
+
 class overzero extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.title}>
-		overzero
-        </Text>
-      </View>
+		<Swiper index = {2}>
+			  <View style={styles.container}>
+				<Text style={styles.title}>
+				Instructions
+				</Text>
+			  </View>
+			  <View style={styles.container2}>
+				<Text style={styles.title}>
+				overZero
+				</Text>
+			  </View>
+			  <View style={styles.container}>
+				<Text style={styles.title}>
+				The Game
+				</Text>
+			  </View>
+		</Swiper>
     );
   }
 }
@@ -51,6 +64,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: colorScheme[6],
+  },
+  container2: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+	backgroundColor: '#BADAD9'
   },
   title: {
     fontSize: 40,
