@@ -18,7 +18,7 @@ class overzero extends Component {
 
   render() {
     return (
-		<Swiper index = {2}>
+		<Swiper index = {1}>
 			  <View style={styles.container}>
 				<Text style={styles.title}>
 				Instructions
@@ -29,11 +29,10 @@ class overzero extends Component {
 				overZero
 				</Text>
 			  </View>
-			  <View style={styles.container}>
-				<Text style={styles.title}>
-				The Game
-				</Text>
-			  </View>
+			  <View style= {styles.container}>
+					<View style = {styles.tile1} />
+					<View style = {styles.tile2} />
+		      </View>
 		</Swiper>
     );
   }
@@ -77,6 +76,22 @@ const styles = StyleSheet.create({
     margin: 10,
     color: colorScheme[4],
   },
+  tile1: {
+	width: 50,
+	height: 50,
+	top: 70,
+	left: 70,
+	position: 'absolute',
+	backgroundColor: 'red'
+  },
+  tile2: {
+	width: 50,
+	height: 50,
+	top: 170,
+	left: 270,
+	position: 'absolute',
+	backgroundColor: 'blue'
+  }
 });
 
 AppRegistry.registerComponent('overzero', () => overzero);
